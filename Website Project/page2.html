@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+  <header>
+    <div>
+      <nav>
+        <a href="index.html">Index</a></li>
+        <a href="page1.html">Page One</a></li>
+        <a href="page2.html">Page Two</a></li>
+        <a href="page3.html">Postmortem</a></li>
+    </div>
+  </header>
+
+  <div class = "header">
+    <div class="top-left">
+        UES 'Safe Travels' Information Terminal
+    </div>
+  </div>
+
+    <!-- audio segment -->
+     <audio id="background" loop>
+        <source src="09. The Raindrop that Fell to the Sky.mp3" type="audio/mpeg">
+     </audio>
+
+     <!-- REPOST FROM PAGE 1 okay i'm gonna be honest. this next portion, i had NO CLUE how to do. for most things out-of-class in regards to this assignment, i've been looking up tutorials and HTML entries, but this time i genuinely had no clue what to do, so i just found a script online that would do it for me. i sincerely apologize for this!! -->
+
+     <script>
+    document.addEventListener("click", function () {
+        const audio = document.getElementById("background");
+        audio.play();
+    }, { once: true });
+    </script>
+
+    <!-- REPOST FROM PAGE 1 okay that's the end of the 'i had no clue how to do this so i found something online to do it for me' portion thank you -->
+
+<div class="page-content">
+
+    <!-- LEFT SIDE (MAIN ARTICLE TEXT) -->
+    <div class="text-segment">
+        <section class="main-section">
+
+            <p>Egocentrism is a lunar item in Risk of Rain 2, added in the Survivors of the Void expansion.</p>
+
+            <p>Every 3 seconds (-50% per stack), this item generates a floating orb around the holder, up to a maximum of 3 (+1 per stack). When an orb gets close to an enemy, it rapidly homes in on it, exploding on contact for 360% damage.</p>
+
+            <p>Every 60 seconds, the holder will lose one random item and gain a stack of Egocentrism. The item lost is random and can come from any rarity, including other lunar items. This timer does not change with increasing stacks of Egocentrism.</p>
+
+            <div class="lore-segment">
+                <p>
+                    <i>The following is an encrypted transcript from the surface of Commencement. Further information is indisclosable to all but High Command.</i>
+                    <p>"...I know you can hear me.</p>
+                    <p>I was willing to give you the benefit of the doubt, at first. Perhaps there was a flaw in my design.</p>
+                    <p>Perhaps it was one of your games. I was even willing to forgive you.</p>
+                    <p>But no, I see the truth now. You trapped me on this forsaken rock. And for what? </p>
+                    <p>Is this all for your little pets? The creatures you love so much?</p>
+                    <p>Or, can I even call it love, when you would stab your only brother in the back? How could you do this to me?</p>
+                    <p>I, the only one who looked out for you after her death.</p>
+                    <p>I, the one who showed you how to create?</p>
+                    <p>I, who HELPED to CREATE the very power you use to invite VERMIN and PESTS to our home?</p>
+                    <p>I, YOUR ONLY BROTHER?</p>
+                    <p>HOW COULD YOU LOVE THOSE IMPERFECT, FLAWED VERMIN BUT NOT ME? AFTER ALL I'VE DONE FOR YOU? HOW COULD YOU DO THIS TO ME?</p>
+                    <div>
+
+                    </div>
+                    <p>...Say something."</p>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- RIGHT SIDE (INFO CARD) -->
+    <div class="image-segment">
+        <section class="info-section">
+
+            <div class="image-header">
+                <img src="Egocentrism (1).png" class="display-image">
+            </div>
+
+            <h1 class="glow-blue"><b>Egocentrism</b></h1>
+
+            <h2 class="descriptor">
+                <span style="color: rgb(112,112,112)">
+                    Gain multiple orbiting bombs.
+                </span>
+                <span style="color: rgb(255,101,101)">
+                    Every minute, assimilate another item into Egocentrism.
+                </span>
+            </h2>
+
+            <h3>Rarity: 
+                <span style="color:rgb(131,220,255)">
+                    <strong>Lunar</strong>
+                </span>
+            </h3>
+
+            <h3>Category: 
+                <span style="color:rgb(131,220,255)">
+                    <strong>Damage & Utility</strong>
+                </span>
+            </h3>
+
+            <p>
+                Every <span style="color:rgb(131,220,255)">3</span> seconds, gain an 
+                <span style="color:rgb(255,232,103)">orbiting bomb</span> that detonates on impact for 
+                <span style="color:rgb(255,232,103)">360%</span> damage,
+                up to a maximum of <span style="color:rgb(131,220,255)">3</span> bombs. 
+                Every <span style="color:rgb(131,220,255)">60</span> seconds,
+                a random item is <span style="color:rgb(131,220,255)">converted</span> into this item.
+            </p>
+
+        </section>
+    </div>
+
+</div>
+
+    <!-- CSS SEGMENT -->
+
+<style>
+    body {
+        margin: 0;
+        font-family: monospace;
+        color: white;
+        background-image: url("ror2-5.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    body::before { /* edits to the background image!! */
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: repeating-linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.03) 0px,
+            rgba(0,0,0,0.05) 2px,
+            rgba(0,0,0,0.05) 4px
+        );
+
+        animation: scanMove 6s linear infinite;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    body::after { /* changes background image from the scan */
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+
+        background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"); /* gives the page a minute texture for the scan; just found a random one online LOL */
+        opacity: 0.05;
+
+        z-index: 2;
+    }
+
+    /* the next few determine how the page is formatted, as well as how much space both segments of the screen take up! (good for making it look nice) */
+    .page-content {
+        display: flex;
+        padding: 60px;
+        gap: 40px;
+    }
+
+    .text-segment {
+        width: 70%
+    }
+
+    .main-section {
+        animation: screenOn 0.7s ease-out forwards;
+        line-height: 1.6;
+        background-color: rgba(20,25,35,0.9);
+        border: 1px solid rgb(131,220,255);
+        padding: 25px;
+    }
+
+    .lore-segment {
+        margin-top: 20px;
+        padding: 20px;
+
+        background-color: rgba(35,40,65, 0.95);
+        border: 2px solid rgb(201, 240, 255);
+
+        font-weight: bold;
+        color:rgb(200,235,255);
+    }
+
+    .image-segment {
+        width: 30%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .info-section {
+        animation: screenOn 0.7s ease-out 0.15s forwards; /* extra time so it comes out after the main section: subtle but awesome touch */
+        background-color: rgba(20,25,35,0.9);
+        border: 1px solid rgb(131,220,255);
+        padding: 25px;
+        width: 100%;
+    }
+
+    /* just some headers and font size changes (oh and a super cool glow effect i used on page 1) */
+
+    .image-header {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .display-image {
+        width: 100px;
+    }
+
+    .descriptor {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    .glow-blue {
+        color: rgb(56, 182, 255);
+     text-shadow:
+        0 0 3px rgb(56,182,255),
+        0 0 8px rgb(56,182,255);
+    }
+
+    /* ANIMATIONS!! (electric boogaloo) */
+
+    @keyframes screenOn { /* creates a flicker effect. randomized the numbers to make it look nicer, too */
+        0% {
+            opacity: 0;
+            transform: scaleY(0.98);
+            filter: brightness(3);
+        }
+        20% {
+            opacity: 1;
+            filter: brightness(0.5);
+        }
+        40% {
+            filter: brightness(1.5);
+        }
+        60% {
+            filter: brightness(0.8);
+        }
+        80% {
+            filter: brightness(1.2);
+        }
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
+            filter: brightness(1);
+        }
+    }
+
+    @keyframes scanMove { /* adds a little droning scan across the screen! */
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 6px;
+    }
+}
+</style>
