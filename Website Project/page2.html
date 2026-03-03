@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="page2.css">
+
+</head>
+
+<body>
+  <header>
+    <div>
+      <nav>
+        <a href="index.html">Index</a></li>
+        <a href="page1.html">Page One</a></li>
+        <a href="page2.html">Page Two</a></li>
+        <a href="page3.html">Postmortem</a></li>
+    </div>
+  </header>
+
+  <div class = "header">
+    <div class="top-left">
+        UES 'Safe Travels' Information Terminal
+    </div>
+  </div>
+
+    <!-- audio segment -->
+     <audio id="background" loop>
+        <source src="09. The Raindrop that Fell to the Sky.mp3" type="audio/mpeg">
+     </audio>
+
+     <!-- REPOST FROM PAGE 1 okay i'm gonna be honest. this next portion, i had NO CLUE how to do. for most things out-of-class in regards to this assignment, i've been looking up tutorials and HTML entries, but this time i genuinely had no clue what to do, so i just found a script online that would do it for me. i sincerely apologize for this!! -->
+
+     <script>
+    document.addEventListener("click", function () {
+        const audio = document.getElementById("background");
+        audio.play();
+    }, { once: true });
+    </script>
+
+    <!-- REPOST FROM PAGE 1 okay that's the end of the 'i had no clue how to do this so i found something online to do it for me' portion thank you -->
+
+<div class="page-content">
+
+    <!-- LEFT SIDE (MAIN ARTICLE TEXT) -->
+    <div class="text-segment">
+        <section class="main-section">
+
+            <p>Egocentrism is a lunar item in Risk of Rain 2, added in the Survivors of the Void expansion.</p>
+
+            <p>Every 3 seconds (-50% per stack), this item generates a floating orb around the holder, up to a maximum of 3 (+1 per stack). When an orb gets close to an enemy, it rapidly homes in on it, exploding on contact for 360% damage.</p>
+
+            <p>Every 60 seconds, the holder will lose one random item and gain a stack of Egocentrism. The item lost is random and can come from any rarity, including other lunar items. This timer does not change with increasing stacks of Egocentrism.</p>
+
+            <div class="lore-segment">
+                <p>
+                    <i>The following is an encrypted transcript from the surface of Commencement. Further information is indisclosable to all but High Command.</i>
+                    <p>"...I know you can hear me.</p>
+                    <p>I was willing to give you the benefit of the doubt, at first. Perhaps there was a flaw in my design.</p>
+                    <p>Perhaps it was one of your games. I was even willing to forgive you.</p>
+                    <p>But no, I see the truth now. You trapped me on this forsaken rock. And for what? </p>
+                    <p>Is this all for your little pets? The creatures you love so much?</p>
+                    <p>Or, can I even call it love, when you would stab your only brother in the back? How could you do this to me?</p>
+                    <p>I, the only one who looked out for you after her death.</p>
+                    <p>I, the one who showed you how to create?</p>
+                    <p>I, who HELPED to CREATE the very power you use to invite VERMIN and PESTS to our home?</p>
+                    <p>I, YOUR ONLY BROTHER?</p>
+                    <p>HOW COULD YOU LOVE THOSE IMPERFECT, FLAWED VERMIN BUT NOT ME? AFTER ALL I'VE DONE FOR YOU? HOW COULD YOU DO THIS TO ME?</p>
+                    <div>
+
+                    </div>
+                    <p>...Say something."</p>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- RIGHT SIDE (INFO CARD) -->
+    <div class="image-segment">
+        <section class="info-section">
+
+            <div class="image-header">
+                <img src="Egocentrism (1).png" class="display-image">
+            </div>
+
+            <h1 class="glow-blue"><b>Egocentrism</b></h1>
+
+            <h2 class="descriptor">
+                <span style="color: rgb(112,112,112)">
+                    Gain multiple orbiting bombs.
+                </span>
+                <span style="color: rgb(255,101,101)">
+                    Every minute, assimilate another item into Egocentrism.
+                </span>
+            </h2>
+
+            <h3>Rarity: 
+                <span style="color:rgb(131,220,255)">
+                    <strong>Lunar</strong>
+                </span>
+            </h3>
+
+            <h3>Category: 
+                <span style="color:rgb(131,220,255)">
+                    <strong>Damage & Utility</strong>
+                </span>
+            </h3>
+
+            <p>
+                Every <span style="color:rgb(131,220,255)">3</span> seconds, gain an 
+                <span style="color:rgb(255,232,103)">orbiting bomb</span> that detonates on impact for 
+                <span style="color:rgb(255,232,103)">360%</span> damage,
+                up to a maximum of <span style="color:rgb(131,220,255)">3</span> bombs. 
+                Every <span style="color:rgb(131,220,255)">60</span> seconds,
+                a random item is <span style="color:rgb(131,220,255)">converted</span> into this item.
+            </p>
+
+            <div class="table"> <!-- THE TABLE I FORGOT TO MAKE LOL -->
+
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Stat</th> <!-- all the stuff in the top bar -->
+                            <th>Value</th>
+                            <th>Stack</th>
+                            <th>Add</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Charge Time</td> <!-- specific stats (taken from risk of rain wiki) -->
+                            <td>3s</td>
+                            <td class="stack-reciprocal">Reciprocal</td>
+                            <td>+1</td>
+                        </tr>
+                        <tr>
+                            <td>Max Orbs</td>
+                            <td>3</td>
+                            <td>Linear</td>
+                            <td>+1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </div>
+
+</div>

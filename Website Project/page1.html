@@ -1,0 +1,78 @@
+<!-- HTML PORTION -->
+
+<!DOCTYPE html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="page1.css">
+
+</head>
+
+<body>
+<div class="boot-static"></div> <!-- calls static effect -->
+  <header>
+    <div>
+      <nav>
+        <a href="index.html">Index</a></li>
+        <a href="page1.html">Page One</a></li>
+        <a href="page2.html">Page Two</a></li>
+        <a href="page3.html">Postmortem</a></li>
+    </div>
+  </header>
+
+  <div class = "header">
+    <div class="top-left">
+        SmileOS 2.0
+    </div>
+  </div>
+
+  <div class="page-content">
+
+    <!-- image segment -->
+    <div class="left-side">
+        <img src="Deathcatcher.png" class="crt-image">
+    </div>
+
+    <!-- audio segment -->
+     <audio id="background" loop>
+        <source src="2026-03-01 17-13-14.mp3" type="audio/mpeg">
+     </audio>
+
+     <!-- okay i'm gonna be honest. this next portion, i had NO CLUE how to do. for most things out-of-class in regards to this assignment, i've been looking up tutorials and HTML entries, but this time i genuinely had no clue what to do, so i just found a script online that would do it for me. i sincerely apologize for this!! -->
+
+     <script>
+    document.addEventListener("click", function () {
+        const audio = document.getElementById("background");
+        audio.play();
+    }, { once: true });
+    </script>
+
+    <!-- okay that's the end of the 'i had no clue how to do this so i found something online to do it for me' portion thank you -->
+
+    <div class="right-side">
+        <section class="typewriter">
+            <h1 class="glow-red", style="color: rgb(200, 0, 0)"><b>DEATHCATCHER</b></h1>
+            <h2><span style="color: rgb(255,0,0)">TYPE:</span> Lesser Demon </h2>
+            <p><span style="color:rgb(255,0,0)">DATA:</span> Distant eyes watched the formation of Idols with fascination, and were driven to attempt the same process of molding useless life into something beautiful.</p>
+            <p>The result, however, could never have been the same, as the endless malice of their creator seeped into the Deathcatchers, whose shells were unable to withhold it, cracking them wide open. </p>
+            <p>Unable to share the love that they were never given, the Deathcatchers cannot protect anyone, and in their vain attempts to do so, they can only form lesser caricatures from the blood of those who are gone forever, puppeting their shapes to continue their past actions, pretending that they're still here, that they could have been saved.</p>
+        </section>
+
+        <section class="typewriter">
+            <h2><span style="color:rgb(255, 208, 0)"<b>STRATEGY</b></span></h2>
+
+            <p>- Puppets are slower and only half as durable as the creatures they are mimicking.</p>
+            <p>- Although puppets do not grant style points, their blood can still be used to heal, making weak puppets an easy source for quick recovery.</p>
+            <p>- While each pulse will create puppets from every fallen foe nearby, the Deathcatchers require time to ready another pulse, meaning the best time to destroy a troublesome puppet is immediately after a previous pulse to maximize the time they lay dormant.</p>
+        </section>
+        
+        <section>
+            <h2><span style="color:rgb(0, 255, 76)"<b>DEVELOPER NOTES</b></span></h2>
+            <p>Well, this one certainly took a bit to make! This is my first time playing with Animations, so most of them will likely be here.</p>
+            <p>Making these animations wasn't easy: without any sort of knowledge on JavaScript, I was forced to make alternatives in CSS. Luckily, this language has been around for god knows how long now, and thus, there are a lot of YouTube tutorials online going over the basics of animations and how to import them.</p>
+            <p>For context, this site was made for the new Deathcatcher enemy in ULTRAKILL. Its recent release of the game's second-to-last set of levels, named 'FRAUD', piqued my interest after playing it, and I decided to replicate the Enemy Log for the foe I found most interesting!</p>
+  </div>
+
+</body>

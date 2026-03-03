@@ -1,0 +1,190 @@
+    body {
+        margin: 0;
+        font-family: monospace;
+        color: white;
+        background-image: url("ror2-5.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    body::before { /* edits to the background image!! */
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: repeating-linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.03) 0px,
+            rgba(0,0,0,0.05) 2px,
+            rgba(0,0,0,0.05) 4px
+        );
+
+        animation: scanMove 6s linear infinite;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    body::after { /* changes background image from the scan */
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+
+        background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"); /* gives the page a minute texture for the scan; just found a random one online LOL */
+        opacity: 0.05;
+
+        z-index: 2;
+    }
+
+    /* the next few determine how the page is formatted, as well as how much space both segments of the screen take up! (good for making it look nice) */
+    .page-content {
+        display: flex;
+        padding: 60px;
+        gap: 40px;
+    }
+
+    .text-segment {
+        width: 70%
+    }
+
+    .main-section {
+        animation: screenOn 0.7s ease-out forwards;
+        line-height: 1.6;
+        background-color: rgba(20,25,35,0.9);
+        border: 1px solid rgb(131,220,255);
+        padding: 25px;
+    }
+
+    .lore-segment {
+        margin-top: 20px;
+        padding: 20px;
+
+        background-color: rgba(35,40,65, 0.95);
+        border: 2px solid rgb(201, 240, 255);
+
+        font-weight: bold;
+        color:rgb(200,235,255);
+    }
+
+    .image-segment {
+        width: 30%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .info-section {
+        animation: screenOn 0.7s ease-out 0.15s forwards; /* extra time so it comes out after the main section: subtle but awesome touch */
+        background-color: rgba(20,25,35,0.9);
+        border: 1px solid rgb(131,220,255);
+        padding: 25px;
+        width: 100%;
+    }
+
+    /* ok time to make the table (NOTE TO SELF: MAKE PADDING EVEN) */
+
+    .table{
+        margin-top: 25px;
+        font-size: 13px;
+    }
+
+    .stats-title {
+        background-color: rgb(45,45,50);
+        padding: 8px 10px;
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid rgba(131,220,255,0.25);
+        border-bottom: none;
+    }
+
+    .stats-table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: rgb(35,35,40);
+        border: 1px solid rgba(131,220,255,0.25);
+    }
+
+    .stats-table th {
+        background-color: rgb(50,50,55);
+        padding: 6px 8px;
+        text-align: left;
+        font-weight: bold;
+        border-bottom: 1px solid rgba(131,220,255,0.25);
+    }
+
+    .stats-table td {
+        padding: 6px 8px;
+        border-bottom: 1px solid rgb(60,60,65);
+    }
+
+    .stats-table tbody tr:nth-child(odd) {
+        background-color: rgb(42,42,48)
+    }
+
+    .stats-table tbody tr:last-child td {
+        border-bottom: none; /* table bugged when i gave it a bottom border so i just Removed It From Existence */
+    }
+
+    .stack-reciprocal {
+        color: rgb(200,120,255);
+        font-weight: bold;
+    }
+
+    /* just some headers and font size changes (oh and a super cool glow effect i used on page 1) */
+
+    .image-header {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .display-image {
+        width: 100px;
+    }
+
+    .descriptor {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    .glow-blue {
+        color: rgb(56, 182, 255);
+     text-shadow:
+        0 0 3px rgb(56,182,255),
+        0 0 8px rgb(56,182,255);
+    }
+
+    /* ANIMATIONS!! (electric boogaloo) */
+
+    @keyframes screenOn { /* creates a flicker effect. randomized the numbers to make it look nicer, too */
+        0% {
+            opacity: 0;
+            transform: scaleY(0.98);
+            filter: brightness(3);
+        }
+        20% {
+            opacity: 1;
+            filter: brightness(0.5);
+        }
+        40% {
+            filter: brightness(1.5);
+        }
+        60% {
+            filter: brightness(0.8);
+        }
+        80% {
+            filter: brightness(1.2);
+        }
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
+            filter: brightness(1);
+        }
+    }
+
+    @keyframes scanMove { /* adds a little droning scan across the screen! */
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 6px;
+    }
+}
