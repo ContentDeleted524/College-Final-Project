@@ -1,0 +1,68 @@
+
+  body { /* USED A STRIPE ANIMATION PLUGIN!!! */
+    background-image: linear-gradient(
+    65deg, 
+    #0d1f1e 45.45%, 
+    #1c4241 45.45%, 
+    #1c4241 50%, 
+    #0d1f1e 50%, 
+    #0d1f1e 95.45%, 
+    #1c4241 95.45%, 
+    #1c4241 100%);
+    
+    background-size: 24.27px 52.06px;
+    animation: moveStripes 20s linear infinite; /* calls keyframe anim */
+    color: rgb(255, 253, 253);
+    font-family: Roboto;
+    margin: 20px;
+    text-align: center;
+  }
+
+  header {
+    text-align: center;
+    padding: 20px;
+    font-size: 20px
+  }
+
+  nav a { /* navigation link */
+    color: rgb(72, 255, 215);
+    text-decoration: none;
+    margin: 10px;
+    border: 2px solid rgb(11, 219, 191);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(40, 68, 63);
+  }
+
+  nav a:hover { /* hovering over nav */
+    color: rgb(106, 255, 173);
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  section {
+    background-color: rgb(40, 68, 63);
+    padding: 20px;
+    margin: 20px 0;
+    border: 3px solid rgb(95, 158, 137);
+    border-radius: 15px;
+
+    opacity: 0.95
+  }
+
+  h1, h2 {
+    font-family: system-ui;
+    text-align: center;
+    font-weight: bold;
+    color:rgb(72, 255, 148)
+  }
+
+  /* computes background animation */
+@keyframes moveStripes {
+      from {
+        background-position: 0px 0px;
+      }
+      to {
+        background-position: 200px 0px;
+      }
+    }
